@@ -6,8 +6,8 @@ setup(
     url="https://github.com/RaoSid01/pyspark_tools"
     use_scm_version=True,
     setup_requires=["setuptools_scm"],
-    author="Siddhant Rao=,
-    author_email="siddhant.rao@lexisnexis.com",
+    author="Siddhant Rao",
+    author_email="siddhant.rao@lexisnexisrisk.com",
     license="Proprietary",
     packages=[
         "test_module"
