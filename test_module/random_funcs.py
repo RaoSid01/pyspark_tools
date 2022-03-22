@@ -1,5 +1,6 @@
 from pyspark.sql import SparkSession
 from pyspark.sql.types import *
+from pyspark.sql.functions import lit
 from datetime import date
 
 spark = SparkSession.builder.appName('test-app').getOrCreate()
