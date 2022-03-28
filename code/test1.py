@@ -34,5 +34,3 @@ df2.show()
 
 print('Code ends here') 
 
-
-# COMMAND ----------
