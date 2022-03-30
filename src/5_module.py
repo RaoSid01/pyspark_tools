@@ -28,8 +28,12 @@ print('reprinting the data')
 df.select('firstname','lastname').show()
 df.select(avg('salary')).show()
 
-df2=random_funcs.replicate_data(3,df)
+df2=random_funcs.replicate_data(4,df)
 df2.show()
 
 print('Code ends here') 
+
+
+# COMMAND ----------
+
 
