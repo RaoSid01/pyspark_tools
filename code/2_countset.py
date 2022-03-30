@@ -1,5 +1,4 @@
 # Databricks notebook source
-
 from pyspark.sql.session import SparkSession
 from pyspark import SparkConf, SparkContext
 from pyspark.sql.types import *
@@ -28,5 +27,3 @@ df.select(avg('salary')).show()
 
 
 print('Code ends here') 
-
-# COMMAND ----------

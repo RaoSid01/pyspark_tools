@@ -1,5 +1,4 @@
 # Databricks notebook source
-
 from pyspark.sql.session import SparkSession
 from pyspark import SparkConf, SparkContext
 from pyspark.sql.types import *
@@ -29,7 +28,7 @@ print('reprinting the data')
 df.select('firstname','lastname').show()
 df.select(avg('salary')).show()
 
-df2=random_funcs.replicate_data(3,df)
+df2=random_funcs.replicate_data(2,df)
 df2.show()
 
 print('Code ends here') 

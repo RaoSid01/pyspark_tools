@@ -1,4 +1,10 @@
 # Databricks notebook source
+# MAGIC %load_ext autoreload
+# MAGIC %autoreload 2
+
+# COMMAND ----------
+
+
 from pyspark.sql.session import SparkSession
 from pyspark import SparkConf, SparkContext
 from pyspark.sql.types import *
@@ -6,8 +12,8 @@ from pyspark.sql.functions import *
 from pyspark.sql.types import *
 from datetime import date
 
-
-from test_module import random_funcs
+# calling a python module by passing the spark session
+from test_module import random_funcs_spark
 
 spark = SparkSession.builder.getOrCreate()
 sc = SparkContext.getOrCreate()
@@ -28,8 +34,12 @@ print('reprinting the data')
 df.select('firstname','lastname').show()
 df.select(avg('salary')).show()
 
-df2=random_funcs.replicate_data(3,df)
+df2=random_funcs_spark.double_data(spark,df) #passing spark session
 df2.show()
 
 print('Code ends here') 
+
+
+# COMMAND ----------
+
 
