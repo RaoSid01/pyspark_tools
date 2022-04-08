@@ -13,3 +13,7 @@ def replicate_data(n, data):
         large_data = large_data.union(batch_data)
 
     return large_data
+  
+  
+def nothing():
+  print ("Nothing")
